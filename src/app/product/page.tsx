@@ -70,11 +70,11 @@ const ProductDetails = async () => {
 
 
         </div>
-        <hr className="bg-[#0000001A] w-[570px] relative top-5"/>
+        <hr className="bg-[#0000001A] w-[570px] relative top-5 overflow-hidden"/>
         {/* Choose Size */}
         <p className="w-[130px] h-[11px] text-[16px] py-4 ">Choose Size</p>
 
-        <div className="w-[420px] h-[46px]  gap-3 flex overflow-hidden">
+        <div className="w-[420px] h-[46px]  gap-3 flex  flex-wrap">
           <div className="w-[86px] h-[46px] rounded-[62px] py-3 px-6 bg-[#F0F0F0] hover:bg-black hover:text-white">Small</div>
           <div className="w-[86px] h-[46px] rounded-[62px] py-3 px-6 bg-[#F0F0F0] hover:bg-black hover:text-white">Medium</div>
           <div className="w-[86px] h-[46px] rounded-[62px] py-3 px-6 bg-[#F0F0F0] hover:bg-black hover:text-white">Large</div>
@@ -125,7 +125,7 @@ const ProductDetails = async () => {
                {query.map((item: any)=> (
            <div className="" key={item._id}> 
            <Link href={`/dynamicProduct/${item._id}`}>
-             <Image src={urlFor(item.image).url()} height={292} width={270} alt={item.name} className="object-cover rounded-md h-[290px] w-full"/>
+             <Image src={urlFor(item.image).url()} height={292} width={270} alt={item.name} className="object-cover rounded-md h-[290px] w-full overflow-hidden"/>
              <div className="ml-4 mb-2">
              <p className="truncate w-[250px] h-[40px] lg:text-[17px] text-[12px]  font-bold py-2 "> {item.name}</p>
             

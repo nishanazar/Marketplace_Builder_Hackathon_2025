@@ -38,7 +38,7 @@ const ProductPage = ({ product }: { product: IDynamic}) => {
     <Image
     src={urlFor(product.image).url()}
     alt={product.name}
-    className="rounded-lg shadow-md object-contain max-h-[450px] max-w-[450px] aspect-square"
+    className="rounded-lg shadow-md object-contain max-h-[450px] max-w-[450px] aspect-square overflow-hidden"
     width={450}
     height={450}/>
     </div>

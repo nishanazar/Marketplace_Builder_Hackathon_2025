@@ -9,7 +9,7 @@ export default function Footer(){
     return(
       <>
       <Offers/>
-      <div className="w-full bg-[#F0F0F0]">
+      <div className="w-full bg-[#F0F0F0] overflow-hidden">
       <div className="w-full lg:h-[440px] sm:h-auto h-auto flex flex-col items-center lg:pt-[130px] sm:pt-[50px] pt-[30px] overflow-x-hidden">
       {/* Header Section */}
       <div className="lg:flex lg:justify-between w-full max-w-[1200px] px-4 sm:px-10">

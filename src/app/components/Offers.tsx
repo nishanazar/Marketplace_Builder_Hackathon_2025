@@ -2,7 +2,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 export default function Offer(){
     return(
-        <div className="lg:w-[1240px] lg:h-[180px] w-[358px] h-[293px]  sm:w-[708px] sm:h-[153px] rounded-[20px] bg-[#000000] relative lg:mx-auto left-3 lg:top-[90px] sm:top-[40px] overflow-x-hidden">
+        <div className="lg:w-[1240px] lg:h-[180px] w-[345px] h-[293px]  sm:w-[708px] sm:h-[153px] rounded-[20px] bg-[#000000] relative lg:mx-auto left-3 lg:top-[90px] sm:top-[40px] overflow-x-hidden">
             <div className="md:flex">
             <h5 className="lg:w-[551px] lg:h-[92px] w-[297px] h-[105] font-bold lg:text-[40px] text-[32px] lg:leading-[45px] leading-[35px] text-[#FFFFFF] lg:pt-[40px] pt-[20px] lg:pl-[40px] pl-[24px]">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h5>
             <div className="lg:mt-[40px] mt-[30px] lg:ml-[160px] ml-[24px]">
