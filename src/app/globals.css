@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
+
+body {
+  @apply overflow-x-hidden; /* Tailwind utility to prevent horizontal scroll */
+}
+
+body {
+  overflow-x: hidden;
+}
