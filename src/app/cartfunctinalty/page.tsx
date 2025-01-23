@@ -13,6 +13,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 import { urlFor } from "@/sanity/lib/image";
+import Link from "next/link";
 
 
 const CartPage = () => {
@@ -41,6 +42,15 @@ const CartPage = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart)); // Save to localStorage
    
   };
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+
+  // You can add shipping or taxes as per your requirement
+  const shipping = 5.0; // Static shipping cost for now
+  const taxes = totalPrice * 0.1; // Example: 10% tax on the total price
+  const grandTotal = totalPrice + shipping + taxes;
 
   return (
     <>
@@ -66,6 +76,7 @@ const CartPage = () => {
                   <div>
                     <h2 className="text-lg font-semibold">{item.productName}</h2>
                     <p className="text-gray-600">${item.price}</p>
+                   
                     <p className="text-gray-500">Quantity: {item.quantity}</p>
                   </div>
                 </div>
@@ -83,6 +94,34 @@ const CartPage = () => {
             ))}
           </div>
         )}
+      </div>
+
+       {/* Order Summary */}
+       <div className="p-5 md:p-8 lg:p-10 mt-8 border-t-2">
+        <h2 className="text-xl font-semibold">Order Summary</h2>
+        <div className="space-y-4 mt-4">
+          <div className="flex justify-between">
+            <p className="text-gray-700">Subtotal:</p>
+            <p className="font-bold">${totalPrice.toFixed(2)}</p>
+          </div>
+          <div className="flex justify-between">
+            <p className="text-gray-700">Shipping:</p>
+            <p className="font-bold">${shipping.toFixed(2)}</p>
+          </div>
+          <div className="flex justify-between">
+            <p className="text-gray-700">Taxes (10%):</p>
+            <p className="font-bold">${taxes.toFixed(2)}</p>
+          </div>
+          <div className="flex justify-between mt-4">
+            <p className="text-lg font-semibold">Total:</p>
+            <p className="text-lg font-semibold">${grandTotal.toFixed(2)}</p>
+          </div>
+        </div>
+        <Link href="/checkout">
+        <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-500">
+          Proceed to Checkout
+        </button>
+        </Link>
       </div>
       <div className="mt-8 flex justify-center my-8">
         <Pagination>
