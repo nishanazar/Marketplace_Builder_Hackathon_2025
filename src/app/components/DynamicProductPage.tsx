@@ -87,7 +87,6 @@ const ProductPage = ({ product }: { product: IDynamic}) => {
     ))}
     </SelectContent>
     </Select>
-
     <Select>
     <SelectTrigger className="w-[130px]">
     <SelectValue placeholder="Select Sizes" />

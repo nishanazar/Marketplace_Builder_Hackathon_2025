@@ -12,7 +12,8 @@ const query:IProduct[] = await client.fetch(`*[_type == "products" && new == tru
     name,
     price,
     description,
-  image,
+    image,
+    discountPercent,
    
   } `)
   
@@ -34,7 +35,10 @@ return (
 <FaStarHalf />
 <p className="w-[33px] h-[19px] text-[14px] text-[#000000]">4.5/5</p>
 </div>
+<div className="flex justify-between">
 <h5 className="w-[55px] h-[32px] text-[24px] text-[#000000] font-bold">${item.price}</h5>
+<p className="bg-[#FF33331A] text-[#FF3333] font-normal text-[12px] md:text-[14px] lg:text-[15px] rounded-full py-1 px-3">{item.discountPercent}%</p>
+</div>
 </div>
 </Link>
 </div>

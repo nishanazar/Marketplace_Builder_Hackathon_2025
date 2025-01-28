@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Image from "next/image"
 import { Item } from "@radix-ui/react-select";
@@ -15,9 +14,8 @@ import {
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 
-
 const CartPage = () => {
-  const [cartItems, setCartItems] = useState<any[]>([]); // State to hold cart items
+const [cartItems, setCartItems] = useState<any[]>([]); // State to hold cart items
 
   useEffect(() => {
     // Retrieve the cart from localStorage when the component mounts
@@ -25,8 +23,8 @@ const CartPage = () => {
     const cartArray = Object.entries(cartData).map(([key, value]: [string, any]) => ({
       ...value,
       productName: key,
-    }));
-    setCartItems(cartArray); // Set the cart items into state
+  }));
+    setCartItems(cartArray); 
   }, []);
 
   // Function to handle item removal
